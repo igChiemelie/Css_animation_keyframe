@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-Animation-keyframe</title>
+</head>
+<style>
+    body,
+    html {
+        background-color: black;
+        margin: 0px;
+    }
+
+    div {
+        padding: 40px;
+        font-size: 80px;
+        font-family: 'Monoton', cursive;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 80px red, 0 0 30px fuchsia, 0 0 6px yellow;
+        color: red;
+
+    }
+
+    section {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        /* height: 200px;
+            background-color: yellow;
+            margin-top: 10px solid white; */
+        /* position: fixed; */
+        bottom: 10px;
+        /* width: 100%;
+            border: white 10px;
+            margin: 10px green dotted; */
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    #error {
+        /* text-shadow: 0 0 80px wheat, 0 0 30px blue, 0 0 30px wheat;
+        color: wheat; */
+        /* text-shadow: 0 0 80px whitesmoke, 0 0 30px blue, 0 0 6px blue; */
+        color: #fff;
+        text-shadow: 0 0 80px #ffffff,  0 0 6px #0000ff;
+    }
+
+    #code {
+        text-shadow: 0 0 100px red, 0 0 40px red, 0 0 5px yellow;
+    }
+
+    #error span {
+        animation: upper 1s infinite;
+    }
+
+    #error span:nth-of-type(2) {
+        animation: upper 5s;
+    }
+
+    #code span:nth-of-type(3) {
+        animation: lower 2s infinite;
+        position: relative;
+    }
+
+    #code span:nth-of-type(2) {
+        text-shadow: none;
+        opacity: .4;
+        animation: lower1 2s infinite;
+        position: relative;
+        /* translate: 0px -20px; */
+
+    }
+
+    #code span:nth-of-type(1) {
+        animation: ongod 2s infinite;
+        position: relative;
+    }
+
+    @keyframes upper {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 4;
+            text-shadow: none;
+        }
+
+    }
+
+    @keyframes lower {
+        from {
+            opacity: 0.99;
+            /* transform: rotatex(50deg); */
+        }
+
+        to {
+            opacity: 0.4;
+            /* text-shadow: none; */
+            left: 20px;
+            /* left: 0.99px; */
+            /* transform: rotateZ(50deg); */
+            /* border-radius: 100px; */
+
+        }
+
+    }
+
+    @keyframes ongod {
+        from {
+            left: 0px;
+        }
+
+        to {
+            left: -20px
+        }
+    }
+
+
+    @keyframes lower1 {
+        from {
+            opacity: 0.99;
+            /* transform: rotatex(50deg); */
+        }
+
+        to {
+            opacity: 0.4;
+            /* text-shadow: none; */
+            top: 50px
+                /* left: 0.99px; */
+                /* transform: rotateZ(50deg); */
+                /* border-radius: 100px; */
+
+        }
+
+    }
+
+    /* section{
+           width: 150px;
+           height: 150px;
+           background-color:brown;
+           background-image: url("messi.jpg");
+           background-size: contain;
+           border-radius: 150px;
+           translate: 440px 0px;
+           border: dotted black 2px;
+           color: blue;
+           text-shadow: 4px 8px  green;
+           line-height: 120px;
+           text-align: center;
+           font-size: 30px;
+           font-family:'Monoton',cursive; 
+           animation: section 2s alternate infinite;
+       }
+       @keyframes section {
+           from{
+               opacity: 0;
+           }
+           to{
+               opacity: 4;
+               transform: rotatez(360deg);
+           }
+           
+       } */
+    @keyframes wow {
+        from {
+            background-color: gold;
+            transform: rotatex(0deg);
+            left: 0px;
+            opacity: 4;
+        }
+
+        to {
+            background-color: cadetblue;
+            left: 950px;
+            transform: rotatey(360deg);
+            opacity: 0;
+
+        }
+    }
+
+    #light {
+        color: white;
+        text-shadow: whitesmoke 0 0 40px;
+        /* padding: 0px; */
+        /* margin-left: 0px; */
+    }
+
+    @keyframes light {
+        from {
+            color: white;
+            opacity: 0.4;
+
+        }
+
+        to {
+            color: whitesmoke;
+            text-shadow: whitesmoke 0 5px 100px;
+            transform: rotateZ(360deg);
+            left: 50px;
+            opacity: 1.0;
+        }
+
+    }
+
+    #light span:nth-of-type(3) {
+        animation: light 2s infinite;
+        position: relative;
+    }
+
+    #light span:nth-of-type(6) {
+        animation: light 2s infinite;
+        opacity: 0.4;
+        /* opacity: 1; */
+        /* position: relative; */
+
+    }
+</style>
+
+<body>
+    <div>
+        <div class="div">
+            <p id="error">
+                I<span>.</span><span>G</span>
+            </p>
+            <p id="code">
+                <span>4</span><span>0</span><span>4</span>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="light">
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="demo.html" target="_blank">Another Page</a>
+    </div>
+
+</body>
+
+</html>

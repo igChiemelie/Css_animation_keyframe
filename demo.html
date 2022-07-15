@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body, html{
+            background-color: black;
+            margin: 0px;
+        }
+        div{
+            padding: 40px;
+            font-size: 80px;
+            font-family:'Monoton',cursive; 
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 0 80px red, 0 0 30px fuchsia, 0 0 6px yellow;
+            color: red;
+
+        }
+        p{
+            margin: 0px;
+        }
+        #error{
+             text-shadow: 0 0 80px wheat, 0 0 30px blue,0 0 30px  wheat; 
+             color: wheat;
+             /* text-shadow: 0 0 80px whitesmoke, 0 0 30px blue, 0 0 6px blue; */
+        }
+        #code{
+            text-shadow: 0 0 100px red, 0 0 40px red, 0 0 5px yellow;
+        }
+        #error span{
+            animation:  upper 1s infinite;
+        }
+        #error span:nth-of-type(2){
+            animation: upper 5s;
+        }
+        #code span:nth-of-type(3){
+            animation: lower 2s infinite;
+            position: relative;
+        }
+        #code span:nth-of-type(2){
+            text-shadow: none;
+            opacity: .4;
+            animation: lower1 2s  infinite;
+            position: relative;
+            /* translate: 0px -20px; */
+            
+        }
+        #code span:nth-of-type(1){
+            animation: ongod 2s infinite;
+            position: relative;
+        }   
+       @keyframes upper {
+           from{
+               opacity: 0;
+           }
+           to{
+               opacity: 4;
+               text-shadow:none;
+           }
+           
+       }
+       @keyframes lower {
+           from{
+               opacity: 0.99;
+               /* transform: rotatex(50deg); */
+           }
+           to{
+               opacity: 0.4;
+               /* text-shadow: none; */
+               left: 20px;
+               /* left: 0.99px; */
+               /* transform: rotateZ(50deg); */
+               /* border-radius: 100px; */
+
+           }
+           
+       }
+       @keyframes ongod{
+           from{
+               left:0px;
+           }
+           to{
+               left:-20px
+           }
+       } 
+           
+    
+       @keyframes lower1{
+           from{
+               opacity: 0.99;
+               /* transform: rotatex(50deg); */
+           }
+           to{
+               opacity: 0.4;
+               /* text-shadow: none; */
+               top: 50px
+               /* left: 0.99px; */
+               /* transform: rotateZ(50deg); */
+               /* border-radius: 100px; */
+
+           }
+           
+       }
+       section{
+           width: 150px;
+           height: 150px;
+           background-color:brown;
+           background-image: url("messi.jpg");
+           background-size: contain;
+           border-radius: 150px;
+           translate: 440px 0px;
+           border: dotted black 2px;
+           color: blue;
+           text-shadow: 4px 8px  green;
+           line-height: 120px;
+           text-align: center;
+           font-size: 30px;
+           font-family:'Monoton',cursive; 
+           animation: section 2s alternate infinite;
+           position: relative;
+       }
+       @keyframes section {
+           from{
+               opacity: 0;
+               /* left: 0px; */
+           }
+           to{
+               opacity: 4;
+               /* transform: rotatez(360deg); */
+               transform: rotatex(360deg);
+               /* left: 980px; */
+           }
+           
+       }
+       @keyframes wow {
+           from{
+               background-color: gold;
+               /* transform: rotatex(70deg); */
+               /* transform: rotateZ(30deg); */
+               left: 0px;
+               opacity: 4;
+           }
+           to{
+               background-color: cadetblue;
+               left: 950px;
+               /* transform:rotatex(80deg); */
+               transform: rotateZ(360deg);
+               opacity: 0;
+
+           }
+       }
+       #two{
+           width: 150px;
+           height: 150px;
+           background-color: gold;
+           border-radius: 150px;
+           /* translate: 100% 0px; */
+           border: dotted black 2px;
+           color:wheat;
+           text-shadow:0 0 50px blue;
+           /* line-height: 100px; */
+           /* text-align: center; */
+           /* font-size: 30px; */
+           /* transform: scale(2, 2); */
+           position: relative;
+           font-size: 30px;
+           line-height: 150px;
+           animation: wow 2s alternate infinite;
+           /* transform: skew(50deg); */
+       }
+       #light{
+           /* width: 100px;
+           height: 100px;
+           font-size: 20px; */
+           color: white;
+               text-shadow: whitesmoke 0 0 40px;
+           /* animation: light 2s infinite; */
+       }
+       @keyframes light {
+           from{
+               color: white;
+ 
+           }
+           to{
+               color: whitesmoke;
+               text-shadow: whitesmoke 0 5px 100px;
+               transform: rotateZ(360deg);
+               left: 50px;
+           }
+           
+       }
+       #light span:nth-of-type(3){
+            animation: light 2s infinite;
+            position: relative;
+        }
+
+
+
+
+    </style>
+<body>
+    <div>
+           <p id="error">
+        
+                I<span>.</span><span>G</span>
+            
+          </p>
+           <p id="code">
+             <span>4</span><span>0</span><span>4</span>
+          </p>
+    </div>
+    <section>
+        <p>
+            <b> italiano </b>
+            <!-- <img src="../fb.jpg" alt="" width="150px" height="150px"> -->
+
+        </p>
+    </section>
+    <div id="two">
+        <p >italiano</p>
+    </div>
+    <div id="light">
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
+    </div>
+</body>
+</html>
